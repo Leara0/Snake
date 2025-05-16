@@ -6,7 +6,7 @@ public static class UserInteraction
     {
         while (true)
         {
-            if (PlayGame.AcceptDirectionChg)
+            if (Game.AcceptDirectionChg)
             {
                 if (Console.KeyAvailable)
                 {
@@ -35,7 +35,7 @@ public static class UserInteraction
                             break;
                     }
 
-                    PlayGame.AcceptDirectionChg = false;
+                    Game.AcceptDirectionChg = false;
                 }
 
                 Thread.Sleep(10); // this sleep is here so the console gets a rest and isn't overwhelmed by checking

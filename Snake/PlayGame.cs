@@ -4,7 +4,7 @@ namespace Snake;
 
 public class PlayGame
 {
-    public static bool AcceptDirectionChg { get; set; } = true;
+    
     
     public static void PlayTheGame()
     {
@@ -21,7 +21,7 @@ public class PlayGame
         
         while (avoidEdge) //at the same time, constantly run this on the main thread
         {
-            AcceptDirectionChg = true;
+            Game.AcceptDirectionChg = true;
             Console.Clear();
             MakeBoard.DrawBoard();
             
