@@ -1,4 +1,5 @@
 using Snake;
+using Snake.MovingThings;
 
 namespace TestProject1;
 
@@ -7,7 +8,7 @@ public class AppleTest
    [Fact]
    public void MakeAppleReturnsCoordsWithinBounds()
    {
-      var (x, y) = AppleGen.MakeApple();
+      var (x, y) = Apple.MakeApple();
       int expectedWidth = Console.IsOutputRedirected ? 80 : Console.WindowWidth;
       int expectedHeight = Console.IsOutputRedirected ? 80 : Console.WindowHeight;
       

@@ -1,31 +1,38 @@
+using Snake.MovingThings;
+
 namespace Snake;
 
 public class PlayGame
 {
-    public enum Direction
-    {
-        Left,
-        Right,
-        Up,
-        Down
-    };
-
-    public static Direction DirectionHeaded { get; set; }
-    public static List<(int x, int y)> SnakeLinkCoords = new List<(int x, int y)>();
+    public static bool AcceptDirectionChg { get; set; } = true;
+    
     public static void PlayTheGame()
     {
-        var apple = AppleGen.MakeApple(); // this won't go here 
-        DirectionHeaded = Direction.Right;
-       
+        Console.CursorVisible = false;
+        Game.DirectionHeaded = Game.Direction.Right;
+        
         //starts background thread to listen for user input
-        Thread changeDirection = new Thread(UserInteractionChgDirection.ChangeDirection);
-        changeDirection.IsBackground = true; // thread runs in the background (won't block program execution or termination)
+        var changeDirection = new Thread(UserInteraction.DirectionChoice);
+        changeDirection.IsBackground =
+            true; // thread runs in the background (won't block program execution or termination)
+        MovingThings.Snake.StartSnake(); //creates first segment
         changeDirection.Start(); // start this thread
-
-        while (true) //at the same time, constantly run this on the main thread
+        var avoidEdge = true;
+        
+        while (avoidEdge) //at the same time, constantly run this on the main thread
         {
+            AcceptDirectionChg = true;
+            Console.Clear();
+            MakeBoard.DrawBoard();
+            
+            MovingThings.Snake.MoveSnake();
+            Apple.ManageApple();
+
             //handle snake movement and apple eating
-            Thread.Sleep(400);
+
+            avoidEdge = KillingSnake.AvoidEdge();
+
+            Thread.Sleep(200);
         }
     }
 }
