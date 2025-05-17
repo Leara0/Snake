@@ -6,11 +6,14 @@ public static class Snake
     {
         Game.SnakeLinkCoords.Insert(0, (x, y)); //adds head onto body list
 
+        Console.ForegroundColor = ConsoleColor.Green;
         foreach (var link in Game.SnakeLinkCoords) //draws snake
         {
             Console.SetCursorPosition(link.x, link.y);
             Console.Write("X");
         }
+
+        Console.ResetColor();
 
         if (Game.SnakeLinkCoords.Count >= Game.SnakeLength) //trims tail
             Game.SnakeLinkCoords.RemoveAt(Game.SnakeLinkCoords.Count - 1);
@@ -47,7 +50,7 @@ public static class Snake
 
         var snakeHead = (x, y);
         if (!KillingSnake.AvoidSnake(snakeHead))
-            Environment.Exit(0);//ends game if snake hits self
+            Environment.Exit(0); //ends game if snake hits self
         DrawSnake(x, y);
     }
 }

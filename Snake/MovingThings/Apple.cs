@@ -9,12 +9,14 @@ public static class Apple
 
         var rnd = new Random();
 
-        var appleX = rnd.Next(1, width);
-        var appleY = rnd.Next(1, height);
+        var appleX = rnd.Next(2, width-1);
+        var appleY = rnd.Next(2, height-1);
         if (!Console.IsInputRedirected)
         {
             Console.SetCursorPosition(appleX, appleY);
-            Console.Write("O"); //writes an apple to screen at apple spot
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Ó"); //writes an apple to screen at apple spot
+            Console.ResetColor();
         }
 
         return (appleX, appleY);
@@ -23,7 +25,9 @@ public static class Apple
     public static void WriteApple((int x, int y) apple)
     {
         Console.SetCursorPosition(apple.x, apple.y);
-        Console.Write("O");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write("Ó");
+        Console.ResetColor();
     }
 
     public static void ManageApple()
@@ -36,6 +40,7 @@ public static class Apple
         {
             Game.SnakeLength++;
             Game.Apple = MakeApple();
+            Game.Score += 100;
         }
         else
         {
