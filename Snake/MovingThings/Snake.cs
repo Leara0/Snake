@@ -50,7 +50,11 @@ public static class Snake
 
         var snakeHead = (x, y);
         if (!KillingSnake.AvoidSnake(snakeHead))
-            Environment.Exit(0); //ends game if snake hits self
+        {
+            TextManager.EndGameMessage();
+            Environment.Exit(0);//ends game if snake hits self
+            
+        } 
         DrawSnake(x, y);
     }
 }

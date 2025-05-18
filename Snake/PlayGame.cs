@@ -11,6 +11,8 @@ public class PlayGame
     {
         Console.CursorVisible = false;
         Game.DirectionHeaded = Game.Direction.Right;
+        TextManager.WelcomeMessage();
+        Console.ReadKey();
         
         //starts background thread to listen for user input
         var changeDirection = new Thread(UserInteraction.DirectionChoice);
@@ -22,10 +24,10 @@ public class PlayGame
         
         while (avoidEdge) //at the same time, constantly run this on the main thread
         {
-            Game.AcceptDirectionChg = true;
+            Game.AcceptingDirection = true;
             Console.Clear();
             MakeBoard.DrawBoard();
-            Console.SetCursorPosition(0, 0);
+            
             TextManager.WriteScore();
             
             MovingThings.Snake.MoveSnake();
