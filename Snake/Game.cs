@@ -20,4 +20,6 @@ public static class Game // I made a class to store all the properties that are 
     public static (int width, int height) GameBoardSize { get; } = MakeBoard.SetSize();
     public static (int x, int y) Apple { get; set; } = MovingThings.Apple.MakeApple(); // set the first apple
     public static bool AcceptDirectionChg { get; set; } = true;
+
+    
 }

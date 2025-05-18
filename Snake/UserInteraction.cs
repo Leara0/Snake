@@ -35,7 +35,7 @@ public static class UserInteraction
                             break;
                     }
 
-                    Game.AcceptDirectionChg = false;
+                    //Game.AcceptDirectionChg = false;
                 }
 
                 Thread.Sleep(10); // this sleep is here so the console gets a rest and isn't overwhelmed by checking
@@ -43,4 +43,5 @@ public static class UserInteraction
             }
         }
     }
+   
 }
