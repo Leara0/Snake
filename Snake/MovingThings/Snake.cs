@@ -2,29 +2,12 @@ namespace Snake.MovingThings;
 
 public static class Snake
 {
-    private static void DrawSnake(int x, int y)
-    {
-        Game.SnakeLinkCoords.Insert(0, (x, y)); //adds head onto body list
-
-        Console.ForegroundColor = ConsoleColor.Green;
-        foreach (var link in Game.SnakeLinkCoords) //draws snake
-        {
-            Console.SetCursorPosition(link.x, link.y);
-            Console.Write("X");
-        }
-
-        Console.ResetColor();
-
-        if (Game.SnakeLinkCoords.Count >= Game.SnakeLength) //trims tail
-            Game.SnakeLinkCoords.RemoveAt(Game.SnakeLinkCoords.Count - 1);
-    }
-
     public static void StartSnake()
     {
         var height = Console.WindowHeight / 2;
 
         var (x, y) = (1, height);
-        DrawSnake(x, y);
+        Screen.DrawSnake(x, y);
     }
 
     public static void MoveSnake()
@@ -55,6 +38,6 @@ public static class Snake
             Environment.Exit(0);//ends game if snake hits self
             
         } 
-        DrawSnake(x, y);
+        Screen.DrawSnake(x, y);
     }
 }

@@ -11,23 +11,10 @@ public static class Apple
 
         var appleX = rnd.Next(2, width-1);
         var appleY = rnd.Next(2, height-1);
-        if (!Console.IsInputRedirected)
-        {
-            Console.SetCursorPosition(appleX, appleY);
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("Ó"); //writes an apple to screen at apple spot
-            Console.ResetColor();
-        }
+        
+        Screen.WriteApple((appleX, appleY));
 
         return (appleX, appleY);
-    }
-
-    public static void WriteApple((int x, int y) apple)
-    {
-        Console.SetCursorPosition(apple.x, apple.y);
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write("Ó");
-        Console.ResetColor();
     }
 
     public static void ManageApple()
@@ -44,7 +31,7 @@ public static class Apple
         }
         else
         {
-            WriteApple(Game.Apple);
+            Screen.WriteApple(Game.Apple);
         }
     }
 }

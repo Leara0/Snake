@@ -5,8 +5,8 @@ public class KillingSnake
     public static bool AvoidEdge()
     {
         var (x, y) = Game.SnakeLinkCoords[0];
-        var checkX = x < Game.GameBoardSize.width - 1 && x > 1;
-        var checkY = y < Game.GameBoardSize.height - 1 && y > 1;
+        var checkX = x < Game.GameBoardSize.width && x > 0;
+        var checkY = y < Game.GameBoardSize.height && y > 0;
         return checkX && checkY;
     }
 
