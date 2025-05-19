@@ -24,13 +24,17 @@ public class PlayGame
         
         while (avoidEdge) //at the same time, constantly run this on the main thread
         {
-            Game.AcceptingDirection = true;
             Console.Clear();
             MakeBoard.DrawBoard();
             
             TextManager.WriteScore();
-            
+            if (Game.NextDirection.HasValue)
+            {
+                Game.DirectionHeaded = Game.NextDirection.Value;
+                Game.NextDirection = null;
+            }
             MovingThings.Snake.MoveSnake();
+            
             Apple.ManageApple();
 
             avoidEdge = KillingSnake.AvoidEdge();
