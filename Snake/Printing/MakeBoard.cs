@@ -2,15 +2,15 @@ namespace Snake;
 
 public class MakeBoard
 {
-    //60x30 is the goal but must check for console size
-    // if width is greater than 60 then set it to 60
-    // if height is greater than 30 then set it to 30
+    //40x20 is the goal but must check for console size
+    // if width is greater than 40 then set it to 40
+    // if height is greater than 20 then set it to 20
     // write a line of "|" or "-" to make up the boarders of the play area
 
     public static (int width, int height) SetSize()
     {
-        var height= Math.Min(30, Console.WindowHeight - 1);
-        var width= Math.Min(60, Console.WindowWidth - 1);
+        var height= Math.Min(20, Console.WindowHeight - 6);
+        var width= Math.Min(40, Console.WindowWidth - 1);
         return (width, height);
     }
 

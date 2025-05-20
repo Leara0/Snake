@@ -6,7 +6,8 @@ public class TextManager
 {
     public static void WelcomeMessage()
     {
-        TextCenter("Welcome to Snake Game!", -1);
+        TextCenter("Welcome to Snake!", -1);
+        TextCenter("By Arael Seher", 0);
         TextCenter("Press any key to continue...", 1);
     }
     public static void WriteScore()
@@ -35,5 +36,15 @@ public class TextManager
         Console.SetCursorPosition(Game.GameBoardSize.width/2 - length, Game.GameBoardSize.height/2 + y);
         Console.WriteLine(text);
         
+    }
+
+    public static void WriteSnakeAsciiArt()
+    {
+        Console.WriteLine(@"
+  ____ ~^~^~^~^~^~^>_        
+ / ___| _ __   __ _| | _____ 
+ \___ \| '_ \ / _` | |/ / _ \
+  ___) | | | | (_| |   <  __/
+ |____/|_| |_|\__,_|_|\_\___|");
     }
 }

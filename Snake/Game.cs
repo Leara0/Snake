@@ -15,7 +15,7 @@ public static class Game // I made a class to store all the properties that are 
     public static int Score { get; set; } = 0;
 
     public static List<(int x, int y)> SnakeLinkCoords = new();
-    public static int SnakeLength { get; set; } = 8;
+    public static int SnakeLength { get; set; } = 9;
     
     public static Direction DirectionHeaded { get; set; }
     public static Direction? NextDirection { get; set; }
