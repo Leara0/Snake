@@ -1,4 +1,4 @@
-namespace Snake;
+﻿namespace Snake;
 
 public class Screen
 {
@@ -28,7 +28,7 @@ public class Screen
     {
         Console.SetCursorPosition(apple.x, apple.y);
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write("@");
+        Console.Write("🍎");
         Console.ResetColor();
     }
 }
