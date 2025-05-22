@@ -12,8 +12,8 @@ PlayGame.PlayTheGame();
  * - make snake (caterpillar??) into an array
  * - make a pause screen? add instructions for how to pause if desired
  * - add ascii animation of snake/caterpillar
- * - changed snake print to for loop so you can color change the catepillar
- * - add in unicode characters
+ * X changed snake print to for loop so you can color change the catepillar
+ * X add in unicode characters
  * - obsticles
  *
  * my idea:
