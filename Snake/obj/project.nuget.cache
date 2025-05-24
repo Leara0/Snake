@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XraPeJGSRog=",
+  "dgSpecHash": "9IuTaZAj/sU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sehers\\Desktop\\repos\\Snake\\Snake\\Snake.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sehers\\.nuget\\packages\\system.windows.extensions\\9.0.5\\system.windows.extensions.9.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

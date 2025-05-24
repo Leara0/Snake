@@ -7,4 +7,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="System.Windows.Extensions" Version="9.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Assets\Bit Quest.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

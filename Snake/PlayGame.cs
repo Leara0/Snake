@@ -5,8 +5,10 @@ namespace Snake;
 
 public class PlayGame
 {
+    
     public static void PlayTheGame()
     {
+        
         Scenes.Intro();
         Console.Clear();
         MakeBoard.DrawBoard();
@@ -34,5 +36,6 @@ public class PlayGame
         }
 
         TextManager.EndGameMessage();
+        Music.StopMusic();
     }
 }

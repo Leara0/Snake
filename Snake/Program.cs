@@ -2,6 +2,8 @@
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
+Music.PlayMusic();
+
 PlayGame.PlayTheGame();
 
 
@@ -12,10 +14,11 @@ PlayGame.PlayTheGame();
  * - make snake (caterpillar??) into an array
  * - make a pause screen? add instructions for how to pause if desired
  * - add ascii animation of snake/caterpillar
- * X changed snake print to for loop so you can color change the catepillar
+ * X changed snake print to for loop so you can color change the caterpillar
  * X add in unicode characters
- * - obsticles
+ * - obstacles
  *
  * my idea:
- * - red AND green apples, worth different points and both at the same time. Maybe red apples are closer to the edges??
+ * - red AND green apples, worth different points and maybe have both on screen at the same time.
+ * Maybe red apples are closer to the edges??
 */
