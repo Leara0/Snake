@@ -9,7 +9,7 @@ public class MakeBoard
 
     public static (int width, int height) SetSize()
     {
-        var height= Math.Min(20, Console.WindowHeight - 6);
+        var height= Math.Min(20, Console.WindowHeight - 1);
         var width= Math.Min(40, Console.WindowWidth - 1);
         return (width, height);
     }

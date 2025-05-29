@@ -4,12 +4,15 @@ public class Scenes
 {
     public static void Intro()
     {
-        
         Console.CursorVisible = false;
+        ScreenSizeCheck.Check();
         Game.DirectionHeaded = Game.Direction.Right;
         Console.Clear();
+        
         TextManager.WelcomeMessage();
         MakeBoard.DrawBoard();
+        
+        
         Console.ReadKey();
         
 

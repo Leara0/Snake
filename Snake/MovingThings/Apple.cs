@@ -12,7 +12,7 @@ public static class Apple
         var appleX = rnd.Next(2, width-1);
         var appleY = rnd.Next(2, height-1);
         
-        Screen.WriteApple((appleX, appleY));
+        Draw.WriteApple((appleX, appleY));
 
         return (appleX, appleY);
     }
@@ -32,7 +32,7 @@ public static class Apple
         }
         else
         {
-            Screen.WriteApple(Game.Apple);
+            Draw.WriteApple(Game.Apple);
         }
     }
 }

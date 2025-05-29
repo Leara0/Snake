@@ -1,6 +1,6 @@
 ﻿using Snake;
-
 Console.OutputEncoding = System.Text.Encoding.UTF8;
+
 
 Music.PlayMusic();
 
@@ -21,4 +21,6 @@ PlayGame.PlayTheGame();
  * my idea:
  * - red AND green apples, worth different points and maybe have both on screen at the same time.
  * Maybe red apples are closer to the edges??
+ *
+ * MAKE IT WORK WITH SMALLER CONSOLE
 */

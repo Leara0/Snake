@@ -7,7 +7,7 @@ public static class Snake
         var height = Console.WindowHeight / 2;
 
         var (x, y) = (1, height);
-        Screen.DrawSnake(x, y);
+        Draw.DrawSnake(x, y);
     }
 
     public static void MoveSnake()
@@ -38,6 +38,6 @@ public static class Snake
             Environment.Exit(0);//ends game if snake hits self
             
         } 
-        Screen.DrawSnake(x, y);
+        Draw.DrawSnake(x, y);
     }
 }

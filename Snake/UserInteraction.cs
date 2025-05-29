@@ -38,4 +38,12 @@ public static class UserInteraction
                (current == Game.Direction.Left && next == Game.Direction.Right)||
                (current == Game.Direction.Right && next == Game.Direction.Left);
     }
+
+    public static void PressAnyKey()
+    {
+        FormatText.Print(Text.PressAnyKey);
+        Console.ReadKey();
+    }
+    
+
 }

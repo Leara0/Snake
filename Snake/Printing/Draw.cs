@@ -1,6 +1,6 @@
 ﻿namespace Snake;
 
-public class Screen
+public class Draw
 {
     public static void DrawSnake(int x, int y) // x and y are new coords for next head segment
     {
